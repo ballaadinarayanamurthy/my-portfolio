@@ -22,7 +22,7 @@ export interface TimelineEntry {
   disciplines: string[];
 }
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/adinarayana-murthy-portfolio" : "");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/my-portfolio" : "");
 
 export const PERSONAL_INFO = {
   name: "B. ADINARAYANA MURTHY",
