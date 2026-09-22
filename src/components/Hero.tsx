@@ -33,7 +33,11 @@ export default function Hero() {
 
               <div className="pt-1 flex flex-wrap items-center gap-2 font-mono text-xs font-bold text-concrete-800">
                 <span className="bg-concrete-200 px-2.5 py-1">
-                  30+ YEARS OF CIVIL CONSTRUCTION EXPERIENCE
+                  30+ YEARS CIVIL CONSTRUCTION
+                </span>
+                <span className="text-concrete-400">&bull;</span>
+                <span className="bg-concrete-200 px-2.5 py-1">
+                  HIGH-RISE TOWERS &amp; INDUSTRIAL EPC
                 </span>
                 <span className="text-concrete-400">&bull;</span>
                 <span className="bg-concrete-200 px-2.5 py-1">

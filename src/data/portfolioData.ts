@@ -5,7 +5,7 @@ export interface ProjectItem {
   organization: string;
   location: string;
   classification: string;
-  country: "Saudi Arabia";
+  country: string;
   documentedContext: string;
 }
 
@@ -29,8 +29,8 @@ export const PERSONAL_INFO = {
   title: "Construction Manager & Project Manager",
   eyebrow: "CIVIL ENGINEERING • CONSTRUCTION • PROJECT MANAGEMENT",
   positioning:
-    "Civil Construction Manager and Project Manager with 30+ years of experience delivering industrial, infrastructure, EPC and commercial projects across India and Saudi Arabia.",
-  experienceHighlight: "30+ YEARS OF CIVIL CONSTRUCTION EXPERIENCE",
+    "Civil Construction Manager and Project Manager with 30+ years of experience delivering high-rise residential & commercial towers, industrial complexes, infrastructure, EPC and Saudi Aramco energy projects across India and Saudi Arabia.",
+  experienceHighlight: "30+ YEARS CIVIL CONSTRUCTION • HIGH-RISE & INDUSTRIAL EPC",
   careerSpan: "1996 – Present",
   ksaSpan: "1996 – 2020",
   experienceYears: "30+",
@@ -59,14 +59,14 @@ export const CORE_STATS = [
     detail: "Continuous Professional Track",
   },
   {
-    value: "INDIA • KSA",
-    label: "Geographical Track",
-    detail: "Saudi Aramco Projects (1996–2020)",
+    value: "HIGH-RISE",
+    label: "Tower Construction",
+    detail: "Residential Towers & SABIC High-Rise",
   },
   {
-    value: "B.E. Civil",
-    label: "Osmania University",
-    detail: "Graduated 1994",
+    value: "INDIA • KSA",
+    label: "Geographical Track",
+    detail: "Saudi Aramco & Indian EPC Projects",
   },
 ];
 
@@ -80,25 +80,28 @@ export const CAREER_TIMELINE: TimelineEntry[] = [
     country: "India",
     level: "current-cm",
     summary:
-      "Managing complete civil construction activities for industrial and infrastructure projects from excavation to commissioning.",
+      "Managing complete civil construction activities for high-rise residential apartment towers, industrial complexes, and energy infrastructure projects from excavation to commissioning.",
     responsibilities: [
-      "Supervised major pile foundation works, pile caps, raft foundations, pedestals including bored cast-in-situ piles, pile integrity tests, and load testing for gated community high raised apartments at Rajahmundry.",
-      "Executed retaining walls, heavy RCC structures and managed geo-grid installation and soil stabilization works for ONGC, GAIL at Narsapur and Cuttak.",
+      "Supervised major pile foundation works, pile caps, raft foundations, and pedestals including bored cast-in-situ piles, pile integrity tests, and load testing for gated community high-rise apartment towers at Rajahmundry.",
+      "Led high-rise superstructure execution including multi-storey RCC frame, columns, shear walls, staging, formwork cycles, slab casting, curing, and structural finishing.",
+      "Executed retaining walls, deep basement excavation, heavy RCC structures and managed geo-grid installation and soil stabilization works for ONGC, GAIL at Narsapur and Cuttak.",
       "Coordinated erection of structural steel works including columns, beams, trusses, platforms, and roofing systems, warehouse construction at Kuppam Schreiber Dynamix.",
       "Led slab activities including shuttering, reinforcement, embedded items, concrete pouring, curing, and finishing for industrial buildings at Kuppam Schreiber Dynamix and AP government UPHC buildings at Narsapur, Palakole & Bhimavaram.",
-      "Coordinated with MEP teams for embedded conduits, sleeves, trenches, cable routing, and equipment foundations.",
+      "Coordinated with MEP teams for embedded conduits, vertical risers, sleeves, trenches, cable routing, and equipment foundations in tall buildings.",
       "Controlled subcontractors, manpower, equipment deployment, and daily execution activities and conducted client meetings, progress reviews, and site inspections.",
-      "Ensured compliance with QA/QC standards, approved drawings, and HSE requirements.",
+      "Ensured compliance with QA/QC standards, approved drawings, vertical plumbness tolerances, and HSE requirements for tall structures.",
     ],
     disciplines: [
+      "High-rise residential towers",
       "Bored cast-in-situ piles",
       "Pile integrity tests & load testing",
       "Raft foundations & pedestals",
+      "Multi-floor slab casting & staging",
+      "Shear walls & column reinforcement",
       "Retaining walls & heavy RCC",
       "Geo-grid & soil stabilization",
       "Structural steel & roofing systems",
-      "Slab casting & formwork",
-      "MEP embedded services",
+      "MEP vertical risers & embedded services",
     ],
   },
   {
@@ -128,24 +131,25 @@ export const CAREER_TIMELINE: TimelineEntry[] = [
   {
     period: "2009 — 2014",
     yearMarker: "2009",
-    role: "Construction Manager — Saudi Aramco Projects",
+    role: "Construction Manager — Saudi Aramco & SABIC Projects",
     companyOrClient: "Saudi Aramco & SABIC Projects",
     location: "Eastern Province & Jubail, KSA",
     country: "KSA",
     level: "manager",
     summary:
-      "Supervised civil construction activities for multiple industrial Saudi Aramco projects and executed high-rise building at SABIC plant.",
+      "Supervised civil construction activities for multiple industrial Saudi Aramco projects and executed turnkey high-rise building construction at SABIC plant.",
     responsibilities: [
       "Supervised civil construction activities for multiple industrial Saudi Aramco projects in Saudi Arabia and executed heavy Pile foundations, pile caps, geogrid, soil stabilization works.",
-      "Executed construction of high rise building at Hadeed (SABIC plant) at KSA.",
-      "Executed erection of Steel structures including columns, beams, braces and roof structures for different Saudi Aramco Projects.",
-      "Coordinated with clients, contractors, and engineering teams.",
+      "Executed construction of high-rise building at Hadeed (SABIC plant) at KSA, managing multi-level steel structure, composite decking, floor slabs, and high-elevation safety compliance.",
+      "Executed erection of Steel structures including heavy columns, beams, braces and roof structures for different Saudi Aramco Projects.",
+      "Coordinated with clients, contractors, and engineering teams on structural alignment, vertical plumbness, and inspections.",
       "Monitored project progress, ensured quality compliance and handled scheduling, reporting, and contractor coordination.",
     ],
     disciplines: [
-      "Heavy Pile foundations & pile caps",
-      "Geogrid & soil stabilization",
       "High-rise building at Hadeed (SABIC plant)",
+      "Heavy Pile foundations & pile caps",
+      "Multi-storey steel structure & decking",
+      "Geogrid & soil stabilization",
       "Steel structures (columns, beams, braces, roof)",
       "Quality compliance & contractor coordination",
     ],
@@ -241,12 +245,12 @@ export const DOCUMENTED_PROJECTS: ProjectItem[] = [
   {
     id: "proj-05",
     number: "05",
-    title: "Hadeed Steel Plant Expansion",
+    title: "Hadeed Steel Plant Expansion & High-Rise Building",
     organization: "SABIC",
     location: "Al-Jubail Industrial City, Saudi Arabia",
     classification: "High-Rise Building & Heavy Steel Frame",
     country: "Saudi Arabia",
-    documentedContext: "Documented SABIC plant expansion project in Jubail.",
+    documentedContext: "Documented high-rise building and steel plant expansion project for SABIC at Al-Jubail Industrial City, featuring multi-level steel structure, composite decking, floor slabs, and heavy foundations.",
   },
   {
     id: "proj-06",
@@ -258,6 +262,16 @@ export const DOCUMENTED_PROJECTS: ProjectItem[] = [
     country: "Saudi Arabia",
     documentedContext: "Documented petrochemical complex project in Jubail Industrial City.",
   },
+  {
+    id: "proj-07",
+    number: "07",
+    title: "Gated Community High-Rise Residential Apartments",
+    organization: "Apoorva Projects",
+    location: "Rajahmundry, Andhra Pradesh, India",
+    classification: "High-Rise Residential Towers & Deep Piling",
+    country: "India",
+    documentedContext: "Supervised bored cast-in-situ pile foundation works, load testing, raft foundations, and multi-storey superstructure execution for high-rise residential apartment towers.",
+  },
 ];
 
 export const CURRENT_ROLE_SCOPES = [
@@ -265,11 +279,23 @@ export const CURRENT_ROLE_SCOPES = [
     category: "FOUNDATIONS",
     label: "Deep & Substructure",
     items: [
-      "Bored cast-in-situ piles",
-      "Pile integrity tests",
-      "Load testing",
-      "Pile caps & raft foundations",
-      "Pedestals for gated community high-rise (Rajahmundry)",
+      "Bored cast-in-situ piles (up to deep strata)",
+      "Pile integrity tests (PIT) & static/dynamic load testing",
+      "Heavy pile caps & multi-tiered raft foundations",
+      "High-rise tower pedestals & shear wall starter foundations (Rajahmundry)",
+      "Deep basement excavation & shoring management",
+    ],
+  },
+  {
+    category: "HIGH-RISE & RCC",
+    label: "Superstructure & Core",
+    items: [
+      "Multi-storey RCC frame & tower superstructure",
+      "High-rise column casting & shear wall core shuttering",
+      "Repetitive floor slab casting cycles & staging systems",
+      "Heavy structural steel erection: columns, beams, trusses",
+      "Warehouse construction (Kuppam Schreiber Dynamix)",
+      "Multi-level formwork stripping & propping protocols",
     ],
   },
   {
@@ -277,50 +303,41 @@ export const CURRENT_ROLE_SCOPES = [
     label: "Earth & Stabilization",
     items: [
       "Excavation & ground works",
-      "Retaining walls",
-      "Geo-grid installation",
+      "Retaining walls & basement earth retention",
+      "Geo-grid installation & slope stabilization",
       "Soil stabilization works for ONGC & GAIL (Narsapur & Cuttak)",
     ],
   },
   {
-    category: "STRUCTURAL",
-    label: "RCC & Heavy Steel",
-    items: [
-      "Heavy RCC structures",
-      "Structural steel erection: columns, beams, trusses",
-      "Platforms & roofing systems",
-      "Warehouse construction (Kuppam Schreiber Dynamix)",
-    ],
-  },
-  {
-    category: "MEP",
+    category: "MEP & RISERS",
     label: "Services Integration",
     items: [
-      "Coordination with MEP teams",
-      "Embedded conduits & pipe sleeves",
-      "Trenches & cable routing",
-      "Equipment foundations",
+      "Coordination with MEP multidisciplinary teams",
+      "Embedded conduits, floor sleeves & vertical plumbing/electrical risers",
+      "Cable routing trenches & high-rise service shafts",
+      "Heavy equipment foundations & plant bases",
     ],
   },
   {
-    category: "SLABS",
-    label: "Formwork & Finishing",
+    category: "SLABS & FINISHING",
+    label: "Formwork & Concrete",
     items: [
-      "Shuttering & reinforcement",
-      "Embedded items & concrete pouring",
-      "Curing and finishing",
-      "Industrial buildings (Kuppam) & AP Govt UPHC buildings (Narsapur, Palakole, Bhimavaram)",
+      "Shuttering, rebar fabrication & high-flow concrete pouring",
+      "Multi-floor curing protocols & power trowel finishing",
+      "Industrial plant floorings (Kuppam Schreiber Dynamix)",
+      "AP Govt UPHC healthcare buildings (Narsapur, Palakole, Bhimavaram)",
     ],
   },
   {
     category: "QA/QC + HSE",
     label: "Compliance & Control",
     items: [
-      "Compliance with QA/QC standards",
-      "Execution as per approved drawings",
-      "HSE requirements adherence",
-      "Subcontractors, manpower & equipment management",
-      "Client meetings, progress reviews & site inspections",
+      "Compliance with QA/QC standards & IS/Aramco codes",
+      "Execution as per approved structural & architectural drawings",
+      "Vertical plumbness, laser leveling & dimensional tolerances",
+      "High-elevation safety & HSE compliance",
+      "Subcontractors, manpower & heavy crane/equipment deployment",
+      "Client meetings, stage sign-offs & progress inspections",
     ],
   },
 ];
@@ -329,32 +346,32 @@ export const QAQC_PROTOCOLS = [
   {
     title: "Inspection Test Plans",
     tag: "ITP",
-    desc: "Preparation and execution of Inspection Test Plans across all civil construction packages.",
+    desc: "Preparation and execution of Inspection Test Plans across tall building substructures, heavy RCC frames, and industrial steel packages.",
   },
   {
     title: "Method Statements",
     tag: "Procedures",
-    desc: "Formulation of technical method statements for deep foundations, heavy RCC, and steel erection.",
+    desc: "Formulation of technical method statements for deep bored piles, raft foundations, multi-storey staging, and structural steel erection.",
   },
   {
-    title: "Site Inspections",
+    title: "Site & Vertical Inspections",
     tag: "Stage Verification",
-    desc: "Rigorous site inspections for rebar, formwork, embedments, pre-pour checks, and tolerances.",
+    desc: "Rigorous site inspections for rebar, formwork, embedments, pre-pour checks, core alignment, and vertical plumbness tolerances.",
   },
   {
-    title: "Material Inspections",
+    title: "Material & Concrete Inspections",
     tag: "Quality Control",
-    desc: "Verification of incoming materials, cement, rebar, batching tests, and compaction compliance.",
+    desc: "Verification of incoming materials, cement, rebar, batching plant mix designs, cube compressive strength tests, and compaction compliance.",
   },
   {
     title: "Client & Consultant Approvals",
     tag: "Sign-Offs",
-    desc: "Direct interface with client inspectors and consultants for stage-wise inspection approvals.",
+    desc: "Direct interface with client inspectors and consultants for stage-wise inspection approvals from foundation to superstructure.",
   },
   {
     title: "QC Plans & Work Instructions",
     tag: "Quality Systems",
-    desc: "Implementation of comprehensive Quality Control plans and technical work instructions.",
+    desc: "Implementation of comprehensive Quality Control plans and technical work instructions adhering to Saudi Aramco SAES and IS standards.",
   },
 ];
 
@@ -391,40 +408,40 @@ export const PM_RESPONSIBILITIES = [
 
 export const TECHNICAL_EXPERTISE_6_CATEGORIES = [
   {
-    category: "FOUNDATIONS",
+    category: "FOUNDATIONS & PILING",
     skills: [
-      "Pile Foundation Works",
-      "Bored cast-in-situ piles",
-      "Pile integrity tests & Load testing",
-      "Pile Cap & Raft Foundations",
-      "Pedestals & Deep Excavation",
+      "Pile Foundation Works for Tall Towers",
+      "Bored cast-in-situ piles (deep strata)",
+      "Pile integrity tests (PIT) & Load testing",
+      "Heavy Pile Caps & Raft Foundations",
+      "Pedestals & Deep Excavation Shoring",
       "Geo-grid & Soil Stabilization",
-      "Retaining Walls",
+      "Retaining Walls & Earth Retention",
     ],
   },
   {
-    category: "STRUCTURAL SYSTEMS",
+    category: "HIGH-RISE & STRUCTURES",
     skills: [
-      "Heavy RCC Structures",
-      "Slab Casting & Curing",
-      "Shuttering & Reinforcement",
-      "Structural Steel Erection",
-      "Columns, Beams & Trusses",
-      "Platforms & Roofing Systems",
+      "High-Rise Multi-Storey RCC Towers",
+      "Shear Wall & Core Construction",
+      "Multi-Floor Slab Casting & Staging",
+      "Heavy Structural Steel Frame Erection",
+      "Multi-Tier Columns, Beams & Trusses",
+      "Composite Decking & Metal Deck Slabs",
       "Pre-Engineered Buildings (PEB)",
-      "High-Rise Buildings",
+      "Vertical Plumbness & Alignment Control",
     ],
   },
   {
     category: "SITE EXECUTION",
     skills: [
-      "Site Execution & Supervision",
-      "Project Planning & Scheduling",
-      "Manpower Management",
-      "Equipment Deployment",
+      "Turnkey Site Execution & Supervision",
+      "Project Planning & Scheduling (CPM/LOB)",
+      "Manpower & Crew Allocation",
+      "Equipment & Tower Crane Deployment",
       "Subcontractor Coordination",
       "Daily Execution Activities",
-      "Site Inspections",
+      "Site Inspections & Pre-Pour Audits",
       "Excavation to Commissioning",
     ],
   },
@@ -434,10 +451,10 @@ export const TECHNICAL_EXPERTISE_6_CATEGORIES = [
       "QA/QC Procedures & QC Plans",
       "Inspection Test Plans (ITP)",
       "Method Statements Formulation",
-      "Site Inspections & Material Inspections",
-      "HSE & Safety Management",
+      "High-Elevation Safety & HSE Management",
+      "Site Inspections & Material Testing",
       "Client & Consultant Approvals",
-      "Structural Drawings Review",
+      "Structural Drawings & BBS Review",
     ],
   },
   {
@@ -453,7 +470,7 @@ export const TECHNICAL_EXPERTISE_6_CATEGORIES = [
   {
     category: "COORDINATION",
     skills: [
-      "MEP Coordination",
+      "MEP Coordination & Vertical Risers",
       "Embedded Conduits, Sleeves & Trenches",
       "Equipment Foundations",
       "Client Progress Meetings",

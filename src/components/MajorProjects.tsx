@@ -18,18 +18,18 @@ export default function MajorProjects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-concrete-300 gap-4">
           <div>
             <div className="font-mono text-xs text-orange-accent font-bold uppercase tracking-widest mb-2">
-              03 // INTERNATIONAL PROJECT DOSSIERS
+              03 // MAJOR PROJECT DOSSIERS
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-concrete-950 font-sans tracking-tight">
-              Selected International Projects
+              Selected Major &amp; High-Rise Projects
             </h2>
             <p className="text-sm sm:text-base text-concrete-600 font-sans mt-1">
-              Documented Saudi Aramco and SABIC energy &amp; industrial projects in Saudi Arabia.
+              Documented Saudi Aramco &amp; SABIC industrial projects in KSA, and high-rise residential &amp; infrastructure projects in India.
             </p>
           </div>
 
           <div className="font-mono text-xs text-concrete-600 bg-concrete-100 p-3 border border-concrete-300">
-            <strong>DOCUMENTED RECORD:</strong> Preserving exact project names and organizations as recorded in CV.
+            <strong>DOCUMENTED RECORD:</strong> Preserving exact project names, organizations, and high-rise structural scope as recorded in CV.
           </div>
         </div>
 

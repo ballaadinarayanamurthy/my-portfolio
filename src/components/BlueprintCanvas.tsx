@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Layers } from "lucide-react";
 
 export default function BlueprintCanvas() {
-  const [activeLayer, setActiveLayer] = useState<"structural" | "piling">("structural");
+  const [activeLayer, setActiveLayer] = useState<"high-rise" | "structural" | "piling">("high-rise");
 
   return (
     <div className="relative w-full rounded-sm bg-[#0E1520] border border-[#223146] overflow-hidden shadow-xl">
@@ -16,7 +16,7 @@ export default function BlueprintCanvas() {
           <span className="hidden sm:inline text-gray-500">| DWG-BAM-01</span>
         </div>
         <div className="flex items-center gap-1">
-          {(["structural", "piling"] as const).map((layer) => (
+          {(["high-rise", "structural", "piling"] as const).map((layer) => (
             <button
               key={layer}
               onClick={() => setActiveLayer(layer)}
@@ -35,7 +35,11 @@ export default function BlueprintCanvas() {
       {/* SVG Canvas */}
       <div className="relative h-[280px] sm:h-[320px] w-full blueprint-canvas-grid flex items-center justify-center p-3">
         <div className="absolute top-2 left-3 font-mono text-[9px] text-sky-400/60 select-none">
-          SEC: 01 // RCC + STRUCTURAL STEEL // KSA &amp; INDIA
+          {activeLayer === "high-rise"
+            ? "SEC: 01 // MULTI-STOREY HIGH-RISE TOWER // RAJAHMUNDRY & KSA"
+            : activeLayer === "structural"
+            ? "SEC: 02 // RCC & HEAVY INDUSTRIAL STEEL FRAME"
+            : "SEC: 03 // BORED CAST-IN-SITU PILING & RAFT CAP"}
         </div>
 
         <svg
@@ -52,56 +56,98 @@ export default function BlueprintCanvas() {
           </g>
 
           {/* Substructure & Piling */}
-          <g className={activeLayer === "structural" || activeLayer === "piling" ? "opacity-100" : "opacity-30"}>
+          <g className={activeLayer === "piling" || activeLayer === "high-rise" || activeLayer === "structural" ? "opacity-100" : "opacity-30"}>
             {/* Bored Piles */}
-            <line x1="140" y1="215" x2="140" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
-            <line x1="200" y1="215" x2="200" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
-            <line x1="300" y1="215" x2="300" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
-            <line x1="360" y1="215" x2="360" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
+            <line x1="140" y1="225" x2="140" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
+            <line x1="190" y1="225" x2="190" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
+            <line x1="250" y1="225" x2="250" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
+            <line x1="310" y1="225" x2="310" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
+            <line x1="360" y1="225" x2="360" y2="280" stroke="#C65A2E" strokeWidth="2.5" strokeDasharray="4 2" />
 
-            {/* Pile Caps */}
-            <rect x="120" y="200" width="100" height="18" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.2" />
-            <rect x="280" y="200" width="100" height="18" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.2" />
+            {/* Raft / Pile Caps */}
+            <rect x="110" y="210" width="280" height="15" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.2" />
             
             {/* Ground Level */}
-            <line x1="60" y1="200" x2="440" y2="200" stroke="#38BDF8" strokeWidth="1" strokeDasharray="4 2" />
+            <line x1="40" y1="210" x2="460" y2="210" stroke="#38BDF8" strokeWidth="1" strokeDasharray="4 2" />
           </g>
 
-          {/* Superstructure Frame */}
-          <g className={activeLayer === "structural" ? "opacity-100" : "opacity-40"}>
-            {/* Columns */}
-            <rect x="160" y="70" width="20" height="130" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.5" />
-            <rect x="320" y="70" width="20" height="130" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.5" />
+          {/* High-Rise Multi-Storey Tower Superstructure */}
+          {activeLayer === "high-rise" && (
+            <g className="opacity-100">
+              {/* Central Core Shear Wall */}
+              <rect x="235" y="30" width="30" height="180" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.5" />
+              <line x1="250" y1="30" x2="250" y2="210" stroke="#C65A2E" strokeWidth="1" strokeDasharray="3 3" />
 
-            {/* Floor Beam */}
-            <line x1="90" y1="140" x2="410" y2="140" stroke="#38BDF8" strokeWidth="2" />
+              {/* Multi-Floor Columns */}
+              <rect x="140" y="30" width="12" height="180" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.2" />
+              <rect x="348" y="30" width="12" height="180" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.2" />
 
-            {/* Roof Truss */}
-            <path d="M 100 70 L 250 20 L 400 70 Z" stroke="#38BDF8" strokeWidth="1.8" fill="rgba(56, 189, 248, 0.02)" />
-            <line x1="160" y1="70" x2="250" y2="20" stroke="#C65A2E" strokeWidth="1.2" />
-            <line x1="340" y1="70" x2="250" y2="20" stroke="#C65A2E" strokeWidth="1.2" />
-            <line x1="250" y1="20" x2="250" y2="70" stroke="#C65A2E" strokeWidth="1.5" />
+              {/* Multi-Level Floor Slabs */}
+              {/* Floor 01 */}
+              <line x1="120" y1="170" x2="380" y2="170" stroke="#38BDF8" strokeWidth="2" />
+              <text x="75" y="173" fill="rgba(56, 189, 248, 0.7)" fontSize="7" fontFamily="monospace">LVL +4.0m</text>
 
-            {/* Cross Braces */}
-            <line x1="180" y1="70" x2="320" y2="140" stroke="rgba(198, 90, 46, 0.5)" strokeWidth="1" strokeDasharray="3 3" />
-            <line x1="320" y1="70" x2="180" y2="140" stroke="rgba(198, 90, 46, 0.5)" strokeWidth="1" strokeDasharray="3 3" />
-          </g>
+              {/* Floor 02 */}
+              <line x1="120" y1="125" x2="380" y2="125" stroke="#38BDF8" strokeWidth="2" />
+              <text x="75" y="128" fill="rgba(56, 189, 248, 0.7)" fontSize="7" fontFamily="monospace">LVL +8.0m</text>
+
+              {/* Floor 03 */}
+              <line x1="120" y1="80" x2="380" y2="80" stroke="#38BDF8" strokeWidth="2" />
+              <text x="75" y="83" fill="rgba(56, 189, 248, 0.7)" fontSize="7" fontFamily="monospace">LVL +12.0m</text>
+
+              {/* Terrace / Roof Slab */}
+              <line x1="120" y1="35" x2="380" y2="35" stroke="#38BDF8" strokeWidth="2.5" />
+              <text x="75" y="38" fill="rgba(56, 189, 248, 0.7)" fontSize="7" fontFamily="monospace">ROOF +16.0m</text>
+
+              {/* Parapet & Overhead Water Tank / Lift Machine Room */}
+              <rect x="230" y="18" width="40" height="17" fill="#141E2D" stroke="#C65A2E" strokeWidth="1.2" />
+
+              {/* Cross Bracing / Staging indicator */}
+              <line x1="152" y1="170" x2="235" y2="125" stroke="rgba(198, 90, 46, 0.4)" strokeWidth="0.8" strokeDasharray="2 2" />
+              <line x1="265" y1="170" x2="348" y2="125" stroke="rgba(198, 90, 46, 0.4)" strokeWidth="0.8" strokeDasharray="2 2" />
+              <line x1="152" y1="125" x2="235" y2="80" stroke="rgba(198, 90, 46, 0.4)" strokeWidth="0.8" strokeDasharray="2 2" />
+              <line x1="265" y1="125" x2="348" y2="80" stroke="rgba(198, 90, 46, 0.4)" strokeWidth="0.8" strokeDasharray="2 2" />
+            </g>
+          )}
+
+          {/* Standard Structural Frame */}
+          {activeLayer === "structural" && (
+            <g className="opacity-100">
+              {/* Columns */}
+              <rect x="160" y="70" width="20" height="140" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.5" />
+              <rect x="320" y="70" width="20" height="140" fill="#141E2D" stroke="#38BDF8" strokeWidth="1.5" />
+
+              {/* Floor Beam */}
+              <line x1="90" y1="140" x2="410" y2="140" stroke="#38BDF8" strokeWidth="2" />
+
+              {/* Roof Truss */}
+              <path d="M 100 70 L 250 20 L 400 70 Z" stroke="#38BDF8" strokeWidth="1.8" fill="rgba(56, 189, 248, 0.02)" />
+              <line x1="160" y1="70" x2="250" y2="20" stroke="#C65A2E" strokeWidth="1.2" />
+              <line x1="340" y1="70" x2="250" y2="20" stroke="#C65A2E" strokeWidth="1.2" />
+              <line x1="250" y1="20" x2="250" y2="70" stroke="#C65A2E" strokeWidth="1.5" />
+
+              {/* Cross Braces */}
+              <line x1="180" y1="70" x2="320" y2="140" stroke="rgba(198, 90, 46, 0.5)" strokeWidth="1" strokeDasharray="3 3" />
+              <line x1="320" y1="70" x2="180" y2="140" stroke="rgba(198, 90, 46, 0.5)" strokeWidth="1" strokeDasharray="3 3" />
+            </g>
+          )}
 
           {/* Dimension Span */}
           <g stroke="rgba(255, 255, 255, 0.3)" strokeWidth="0.8">
-            <line x1="100" y1="285" x2="400" y2="285" />
-            <line x1="100" y1="280" x2="100" y2="290" />
-            <line x1="400" y1="280" x2="400" y2="290" />
-            <text x="225" y="282" fill="rgba(255, 255, 255, 0.6)" fontSize="8" fontFamily="monospace">
-              SPAN 24.0 m
+            <line x1="110" y1="290" x2="390" y2="290" />
+            <line x1="110" y1="285" x2="110" y2="295" />
+            <line x1="390" y1="285" x2="390" y2="295" />
+            <text x="215" y="287" fill="rgba(255, 255, 255, 0.6)" fontSize="8" fontFamily="monospace">
+              RAFT SPAN 28.0 m
             </text>
           </g>
         </svg>
 
         <div className="absolute bottom-2 right-3 font-mono text-[9px] text-gray-400">
-          SAUDI ARAMCO SAES &bull; IS-456
+          SAUDI ARAMCO SAES &bull; IS-456 &bull; NBC TALL BUILDINGS
         </div>
       </div>
     </div>
   );
 }
+
