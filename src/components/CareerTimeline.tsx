@@ -155,7 +155,7 @@ export default function CareerTimeline() {
 
                     <div>
                       <div className="font-mono text-xs font-bold text-concrete-900 uppercase tracking-wider mb-2">
-                        Documented Responsibilities (CV Record):
+                        Key Responsibilities &amp; Execution:
                       </div>
                       <ul className="space-y-1.5">
                         {item.responsibilities.map((resp, rIdx) => (

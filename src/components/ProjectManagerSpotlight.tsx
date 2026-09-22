@@ -39,7 +39,7 @@ export default function ProjectManagerSpotlight() {
 
           <div className="lg:col-span-4 bg-concrete-800 p-5 border border-concrete-700 font-mono text-xs text-concrete-300 space-y-1.5">
             <div className="text-white font-bold pb-1.5 border-b border-concrete-700">
-              DOCUMENTED CV RESPONSIBILITIES:
+              CORE RESPONSIBILITIES &amp; DELIVERABLES:
             </div>
             <p className="text-[11px] leading-relaxed text-concrete-300">
               &bull; Managed construction and QA/QC activities for major oil and gas projects.<br />

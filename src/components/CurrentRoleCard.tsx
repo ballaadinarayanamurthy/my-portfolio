@@ -117,7 +117,7 @@ export default function CurrentRoleCard() {
                   {activeScope.category} &mdash; <span className="text-orange-accent">{activeScope.label}</span>
                 </h3>
                 <span className="font-mono text-[11px] text-concrete-500 uppercase">
-                  VERIFIED CV SCOPE
+                  EXECUTION SCOPE
                 </span>
               </div>
 

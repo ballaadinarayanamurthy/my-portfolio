@@ -15,7 +15,7 @@ export default function MajorProjects() {
     <section id="projects" className="py-20 bg-white border-b border-concrete-300 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-concrete-300 gap-4">
+        <div className="mb-12 pb-6 border-b border-concrete-300">
           <div>
             <div className="font-mono text-xs text-orange-accent font-bold uppercase tracking-widest mb-2">
               03 // MAJOR PROJECT DOSSIERS
@@ -26,10 +26,6 @@ export default function MajorProjects() {
             <p className="text-sm sm:text-base text-concrete-600 font-sans mt-1">
               Documented Saudi Aramco &amp; SABIC industrial projects in KSA, and high-rise residential &amp; infrastructure projects in India.
             </p>
-          </div>
-
-          <div className="font-mono text-xs text-concrete-600 bg-concrete-100 p-3 border border-concrete-300">
-            <strong>DOCUMENTED RECORD:</strong> Preserving exact project names, organizations, and high-rise structural scope as recorded in CV.
           </div>
         </div>
 
@@ -82,7 +78,7 @@ export default function MajorProjects() {
                       id={`project-record-${proj.id}`}
                       className="mt-4 pt-3 border-t border-concrete-200 text-xs font-mono text-concrete-700 space-y-1 bg-white p-3 border border-concrete-200"
                     >
-                      <div className="text-orange-accent font-bold uppercase text-[10px]">VERIFIED CV CONTEXT</div>
+                      <div className="text-orange-accent font-bold uppercase text-[10px]">PROJECT HIGHLIGHTS &amp; SCOPE</div>
                       <p>{proj.documentedContext}</p>
                     </div>
                   )}

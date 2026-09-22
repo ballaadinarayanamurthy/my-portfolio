@@ -94,8 +94,8 @@ export default function TechnicalExpertise() {
             </div>
 
             <div className="mt-8 pt-4 border-t border-concrete-200 font-mono text-[11px] text-concrete-500 flex justify-between">
-              <span>STATUS: SOURCED DIRECTLY FROM CV</span>
-              <span className="text-concrete-900 font-bold">VERIFIED</span>
+              <span>DOMAIN: CIVIL &amp; STRUCTURAL ENGINEERING</span>
+              <span className="text-concrete-900 font-bold">PROFESSIONAL COMPETENCY</span>
             </div>
           </div>
         </div>
